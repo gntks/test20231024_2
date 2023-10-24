@@ -7,9 +7,19 @@ on:             #実行されるタイミングを設定
     branches: [ "master" ]
 
 jobs:           #以下が実行される内容
-  SSH:
-    runs-on: ubuntu-latest  #実行環境を指定
-      
-    steps:
-    - name: sshToPr
-      run: ssh -i ${{ secrets.PRIVATE_KEY }} nakamura@106.155.0.215
+   run-ssh:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Install SSH key
+         uses: shimataro/ssh-key-action@v2
+         with:
+           key: ${{ secrets.PRIVATE_KEY }}
+           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+           name: id_rsa
+           config: |
+             Host server
+               HostName ${{ secrets.HOST_NAME }}
+               User ${{ secrets.USER_NAME }}
+               IdentityFile ~/.ssh/github-actions
+       - name: run
+         run: ssh server "echo 'hogehoge'"
