@@ -15,7 +15,7 @@ jobs:           #以下が実行される内容
          with:
            key: ${{ secrets.PRIVATE_KEY }}
            known_hosts: ${{ secrets.KNOWN_HOSTS }}
-           name: id_rsa
+           name: github-actions
            config: |
              Host server
                HostName ${{ secrets.HOST_NAME }}
