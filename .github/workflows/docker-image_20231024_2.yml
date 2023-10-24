@@ -17,3 +17,4 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
+      run: docker images
