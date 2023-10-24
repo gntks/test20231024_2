@@ -1,28 +1,22 @@
-name: SSH CI
+name: CI        #Workflow の名前何でもOK
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on:             #実行されるタイミングを設定
+  push:         #pushでマージされた時も動く（pull_request:とすればプルリクのマージのみになる）
+    branches:   #対象となるブランチを設定
+      - main
 
-jobs:
-
-  deploy:
-
-    runs-on: ubuntu-latest
+jobs:           #以下が実行される内容
+  build:
+    runs-on: ubuntu-latest  #実行環境を指定
 
     steps:
-
-    - name: yarn install
-      # ssh接続のための接続
-      env:
-        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      run: |
-        mkdir -p ~/.ssh
-        echo "$PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-        chmod 700 ~/.ssh/id_rsa
-        eval $(ssh-agent -s)
-        ssh-add ~/.ssh/id_rsa
-        ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-        yarn install
+      - name: Deploy
+        uses: appleboy/ssh-action@master    #使用するアクション（sshでサーバに接続）
+        with:
+          host: nakamura-FMVS14001
+          username: nakamura
+          port: 22
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |     #サーバで実行されるコマンド（サーバ内で動かせるコマンドなら大体できるはず…なので色々やってみると吉？）
+            cd /home/nakamura/tmp 
+            git pull origin main
