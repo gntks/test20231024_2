@@ -22,4 +22,4 @@ jobs:
       run: docker images
 
     - name: DcSave
-      run: docker save getting-started2 > getting-started2.tar
+      run: docker save getting-started2 > /home/runner/work/test20231024/test20231024/getting-started2.tar
