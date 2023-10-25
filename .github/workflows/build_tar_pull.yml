@@ -29,6 +29,12 @@ jobs:
 #    - name: DcChkBranch
 #      run: git branch --contains
 
+    - name: Cd
+      run: cd /home/runner/work/test20231024/test20231024
+
+    - name: GitIfsIns
+      run: git lfs install
+
     - name: GitAdd
       run: git add /home/runner/work/test20231024/test20231024
 
