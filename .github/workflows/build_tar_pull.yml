@@ -39,8 +39,8 @@ jobs:
     - name: GitCommit
       run: git commit -m'GitCommit'
 
-    - name: GitRemoteAdd
-      run: git remote add origin https://github.com/gntks/test20231024.git
+#    - name: GitRemoteAdd
+#      run: git remote add origin https://github.com/gntks/test20231024.git
 
     - name: GitPush
       run: git push origin master
