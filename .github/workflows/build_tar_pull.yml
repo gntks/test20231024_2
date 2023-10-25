@@ -24,5 +24,17 @@ jobs:
     - name: DcSave
       run: docker save getting-started2 > /home/runner/work/test20231024/test20231024/getting-started2.tar
 
-    - name: DcChkBranch
-      run: git branch --contains
+#    - name: DcChkBranch
+#      run: git branch --contains
+
+    - name: GitAdd
+      run: git add /home/runner/work/test20231024/test20231024
+
+    - name: GitCommit
+      run: git commit -m'GitCommit'
+
+    - name: GitRemoteAdd
+      run: git remote add origin https://github.com/gntks/test20231024.git
+
+    - name: GitPush
+      run: git push origin master
