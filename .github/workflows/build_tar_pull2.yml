@@ -42,7 +42,7 @@ jobs:
       run: git lfs track 
 
     - name: GitLfsTrackAdd
-      run: git lfs track "*.jpg" 
+      run: git lfs track "*.tar.gz" 
 
     - name: GitLfsTrackAf
       run: git lfs track 
