@@ -18,6 +18,13 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
+    
+    - name: GitCheckout
+      run: git checkout master_20231026
+    
+    - name: GitBranch
+      run: git branch
+    
     - name: Build the Docker image
       run: docker build . --file /home/runner/work/test20231024/test20231024/sample_python/Dockerfile -t python-image
 
