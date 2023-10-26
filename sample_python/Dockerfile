@@ -11,10 +11,10 @@ RUN echo ${VAR}
 
 # 作業ディレクトリの指定
 #WORKDIR /usr/src/app  
-WORKDIR  /home/nakamura/clone/test20231024/sample_python
+#WORKDIR  /home/nakamura/clone/test20231024/sample_python
 
 # アプリのインストール
-COPY requirements.txt . 
+#COPY requirements.txt . 
 #RUN pip install --no-cache-dir -r requirements.txt
 
 # 起動時の処理実行
