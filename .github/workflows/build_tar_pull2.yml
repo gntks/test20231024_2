@@ -1,0 +1,66 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions: write-all
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
+
+    - name: DcImg
+      run: docker images
+
+    - name: DcSave
+      run: docker save getting-started2 | gzip > /home/runner/work/test20231024/test20231024/getting-started2.tar.gz
+
+#    - name: DcChkBranch
+#      run: git branch --contains
+
+    - name: Cd
+      run: cd /home/runner/work/test20231024/test20231024
+
+    - name: GitLfsIns
+      run: sudo apt install git-lfs
+
+    - name: GitLfsVer
+      run: git lfs version
+
+    - name: GitLfsTrackBf
+      run: git lfs track 
+
+    - name: GitLfsTrackAdd
+      run: git lfs track "*.tar.gz" 
+
+    - name: GitLfsTrackAf
+      run: git lfs track 
+
+    - name: GitAdd
+      run: git add /home/runner/work/test20231024/test20231024/getting-started2.tar.gz
+
+    - name: GitConfigEmail
+      run: git config --global user.email "n_tashike@yahoo.co.jp"
+
+    - name: GitConfigName
+      run: git config --global user.name "gntks"
+
+    - name: GitCommit
+      run: git commit -m'GitCommit'
+
+#    - name: GitRemoteAdd
+#      run: git remote add origin https://github.com/gntks/test20231024.git
+
+    - name: GitPush
+      run: git push origin master
