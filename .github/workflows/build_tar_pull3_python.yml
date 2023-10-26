@@ -21,8 +21,8 @@ jobs:
     - name: GitFetch
       run: git fetch -p
 
-    - name: GitMerge
-      run: git merge origin/master_20231026
+#    - name: GitMerge
+#      run: git merge origin/master_20231026
 #      run: git merge origin/master
     
     - name: GitCheckout
