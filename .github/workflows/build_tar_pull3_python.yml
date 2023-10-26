@@ -17,6 +17,13 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
+
+    - name: GitFetch
+      run: git fetch -p
+
+    - name: GitMerge
+      run: git merge origin/master_20231026
+#      run: git merge origin/master
     
     - name: GitCheckout
       run: git checkout master_20231026
@@ -73,7 +80,9 @@ jobs:
       run: git fetch -p
 
     - name: GitMerge
-      run: git merge origin/master
+      run: git merge origin/master_20231026
+#      run: git merge origin/master
 
     - name: GitPush
-      run: git push origin master
+      run: git push origin master_20231026
+#      run: git push origin master
