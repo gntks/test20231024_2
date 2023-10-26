@@ -62,8 +62,5 @@ jobs:
 #    - name: GitRemoteAdd
 #      run: git remote add origin https://github.com/gntks/test20231024.git
 
-    - name: GitPull
-      run: git pull
-
     - name: GitPush
       run: git push origin master
