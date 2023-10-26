@@ -33,7 +33,10 @@ jobs:
       run: cd /home/runner/work/test20231024/test20231024
 
     - name: GitLfsIns
-      run: git lfs install
+      run: sudo apt install git-lfs
+
+    - name: GitLfsVer
+      run: git lfs version
 
     - name: GitLfsTrackBf
       run: git lfs track 
