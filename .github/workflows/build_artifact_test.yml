@@ -1,0 +1,48 @@
+name: Docker Image CI
+
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions: write-all
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - name: GitFetch
+      run: git fetch -p
+
+#    - name: GitMerge
+#      run: git merge origin/master_20231026
+#      run: git merge origin/master
+    
+    - name: GitCheckout
+      run: git checkout master_20231026
+    
+    - name: GitBranch
+      run: git branch
+    
+    - name: Build the Docker image
+      run: docker build . --file /home/runner/work/test20231024/test20231024/sample_python/Dockerfile -t python-image
+
+    - name: DcImg
+      run: docker images
+
+    - name: DcSave
+      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+         name: FilePath
+         path: /home/runner/work/test20231024/test20231024/python-image2.tar.gz
