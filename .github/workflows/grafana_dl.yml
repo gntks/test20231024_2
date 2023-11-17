@@ -1,0 +1,80 @@
+name: grafanaDL
+
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions: write-all
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - name: GitFetch
+      run: git fetch -p
+
+#    - name: GitMerge
+#      run: git merge origin/master_20231026
+#      run: git merge origin/master
+    
+    - name: GitCheckout
+      run: git checkout master_20231026
+    
+    - name: GitBranch
+      run: git branch
+    
+    - name: Cd
+      run: cd /home/runner/work/test20231024/test20231024
+
+    - name: Cd
+      run: wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.1_amd64.deb
+
+    - name: GitLfsIns
+      run: sudo apt install git-lfs
+
+    - name: GitLfsVer
+      run: git lfs version
+
+    - name: GitLfsTrackBf
+      run: git lfs track 
+
+    - name: GitLfsTrackAdd
+      run: git lfs track "*.deb" 
+
+    - name: GitLfsTrackAf
+      run: git lfs track 
+
+    - name: GitAdd
+      run: git add /home/runner/work/test20231024/test20231024/grafana-enterprise_10.2.1_amd64.deb
+
+    - name: GitConfigEmail
+      run: git config --global user.email "n_tashike@yahoo.co.jp"
+
+    - name: GitConfigName
+      run: git config --global user.name "gntks"
+
+    - name: GitCommit
+      run: git commit -m'GitCommit'
+
+#    - name: GitRemoteAdd
+#      run: git remote add origin https://github.com/gntks/test20231024.git
+
+    - name: GitFetch
+      run: git fetch -p
+
+    - name: GitMerge
+      run: git merge origin/master_20231026
+#      run: git merge origin/master
+
+    - name: GitPush
+      run: git push origin master_20231026
+#      run: git push origin master
