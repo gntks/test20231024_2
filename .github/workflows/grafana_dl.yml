@@ -35,46 +35,52 @@ jobs:
     - name: Cd
       run: cd /home/runner/work/test20231024/test20231024
 
-    - name: Cd
-      run: wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.1_amd64.deb
+    - name: GrafanaOss
+      run: docker pull grafana/grafana-oss
 
-    - name: GitLfsIns
-      run: sudo apt install git-lfs
+    - name: DockerImages
+      run: docker images
 
-    - name: GitLfsVer
-      run: git lfs version
+#    - name: Cd
+#      run: wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.1_amd64.deb
 
-    - name: GitLfsTrackBf
-      run: git lfs track 
+#    - name: GitLfsIns
+#      run: sudo apt install git-lfs
 
-    - name: GitLfsTrackAdd
-      run: git lfs track "*.deb" 
+#    - name: GitLfsVer
+#      run: git lfs version
 
-    - name: GitLfsTrackAf
-      run: git lfs track 
+#    - name: GitLfsTrackBf
+#      run: git lfs track 
 
-    - name: GitAdd
-      run: git add /home/runner/work/test20231024/test20231024/grafana-enterprise_10.2.1_amd64.deb
+#    - name: GitLfsTrackAdd
+#      run: git lfs track "*.deb" 
 
-    - name: GitConfigEmail
-      run: git config --global user.email "n_tashike@yahoo.co.jp"
+#    - name: GitLfsTrackAf
+#      run: git lfs track 
 
-    - name: GitConfigName
-      run: git config --global user.name "gntks"
+#    - name: GitAdd
+#      run: git add /home/runner/work/test20231024/test20231024/grafana-enterprise_10.2.1_amd64.deb
 
-    - name: GitCommit
-      run: git commit -m'GitCommit'
+#    - name: GitConfigEmail
+#      run: git config --global user.email "n_tashike@yahoo.co.jp"
 
-#    - name: GitRemoteAdd
-#      run: git remote add origin https://github.com/gntks/test20231024.git
+#    - name: GitConfigName
+#      run: git config --global user.name "gntks"
 
-    - name: GitFetch
-      run: git fetch -p
+#    - name: GitCommit
+#      run: git commit -m'GitCommit'
 
-    - name: GitMerge
-      run: git merge origin/master_20231026
-#      run: git merge origin/master
+##    - name: GitRemoteAdd
+##      run: git remote add origin https://github.com/gntks/test20231024.git
 
-    - name: GitPush
-      run: git push origin master_20231026
+#    - name: GitFetch
+#      run: git fetch -p
+
+#    - name: GitMerge
+#      run: git merge origin/master_20231026
+##      run: git merge origin/master
+
+#    - name: GitPush
+#      run: git push origin master_20231026
 #      run: git push origin master
