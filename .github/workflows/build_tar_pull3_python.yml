@@ -17,9 +17,12 @@ jobs:
 
     steps:
 
+    - name: Df_checkout_bf
+      run: df
+
     - uses: actions/checkout@v3
 
-    - name: Df
+    - name: Df_checkout_af
       run: df
 
     - name: GitFetch
@@ -34,15 +37,27 @@ jobs:
     
     - name: GitBranch
       run: git branch
+
+    - name: Df_build_bf
+      run: df
     
     - name: Build the Docker image
       run: docker build . --file /home/runner/work/test20231024/test20231024/sample_python/Dockerfile -t python-image
 
+    - name: Df_build_af
+      run: df
+
     - name: DcImg
       run: docker images
 
+    - name: Df_save_bf
+      run: df
+
     - name: DcSave
       run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+
+    - name: Df_save_af
+      run: df
 
 #    - name: DcChkBranch
 #      run: git branch --contains
