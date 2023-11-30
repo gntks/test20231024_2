@@ -19,6 +19,9 @@ jobs:
 
     - uses: actions/checkout@v3
 
+    - name: Df
+      run: df
+
     - name: GitFetch
       run: git fetch -p
 
