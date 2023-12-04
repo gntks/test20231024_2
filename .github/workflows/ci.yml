@@ -1,10 +1,11 @@
 name: CI        #Workflow の名前何でもOK
 
-#on:             #実行されるタイミングを設定
+on:             #実行されるタイミングを設定
 #  push:
 #    branches: [ "master" ]
 #  pull_request:
 #    branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:           #以下が実行される内容
    run-ssh:
