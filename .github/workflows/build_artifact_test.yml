@@ -18,7 +18,15 @@ jobs:
 
     steps:
 
+    - name: Pwd1
+      run: |
+        pwd
+
     - uses: actions/checkout@v3
+
+    - name: Pwd2
+      run: |
+        pwd
 
     - name: GitFetch
       run: git fetch -p
@@ -42,8 +50,8 @@ jobs:
     - name: DcSave
       run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
 
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-         name: FilePath
-         path: /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+#    - name: Upload Artifacts
+#      uses: actions/upload-artifact@v3
+#      with:
+#         name: FilePath
+#         path: /home/runner/work/test20231024/test20231024/python-image2.tar.gz
