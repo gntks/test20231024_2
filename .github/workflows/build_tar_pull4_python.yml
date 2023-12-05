@@ -64,12 +64,12 @@ jobs:
 
     - name: compare file
       run: |
-        diff -q python-image2.tar.gz python-image2.tar.gz_tmp
-        if [diff -q python-image2.tar.gz python-image2.tar.gz_tmp]; then
-          echo "Same File"
-        else
-          echo "Different File"
-        fi     
+        diff -s python-image2.tar.gz python-image2.tar.gz_tmp > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+          echo "同じファイルです"
+        elif [ $? -eq 1 ]; then
+          echo "違うファイルです"
+        fi
 
     - name: Df_save_af
       run: df
