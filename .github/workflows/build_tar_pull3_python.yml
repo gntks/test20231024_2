@@ -34,8 +34,8 @@ jobs:
 #      run: git merge origin/master
     
     - name: GitCheckout
-#      run: git checkout master_20231026
-      run: git checkout master_20231205
+      run: git checkout master_20231026
+#      run: git checkout master_20231205
     
     - name: GitBranch
       run: git branch
@@ -108,11 +108,11 @@ jobs:
       run: git fetch -p
 
     - name: GitMerge
-#      run: git merge origin/master_20231026
-      run: git merge origin/master_20231205
+      run: git merge origin/master_20231026
+#      run: git merge origin/master_20231205
 #      run: git merge origin/master
 
     - name: GitPush
-#      run: git push origin master_20231026
-      run: git push origin master_20231205
+      run: git push origin master_20231026
+#      run: git push origin master_20231205
 #      run: git push origin master
