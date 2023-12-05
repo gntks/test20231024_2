@@ -18,6 +18,9 @@ jobs:
     - name: PWD
       run: pwd
 
+    - name: Mkdir
+      run: mkdir /tmp_contents
+
     - name: Ls
       run: ls -lrt /
 
@@ -26,8 +29,16 @@ jobs:
     - name: GitFetch
       run: git fetch -p
 
+    # ブランチmaster_20231026の資材を/tmp_contentsフォルダに格納する
     - name: GitCheckout
       run: git checkout master_20231026
+
+    - name: CpContents
+      run: cp -r . /tmp_contents
+
+    - name: Ls
+      run: ls -lrt /tmp_contents
+
       
 #    - name: Build the Docker image
 #      run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
