@@ -29,7 +29,7 @@ jobs:
     - name: GitFetch
       run: git fetch -p
 
-    # ブランチmaster_20231026の資材を/tmp_contentsフォルダに格納する
+    # ブランチmaster_20231026の資材(一つ前のバックアップ資材を想定)を/tmp_contentsフォルダに格納する
     - name: GitCheckout
       run: git checkout master_20231026
     - name: CpContents
@@ -39,13 +39,26 @@ jobs:
     - name: Ls
       run: ls -lrt
 
-    # ブランチmaster_20231205に切り替える
+    # ブランチmaster_20231205(最新のバックアップ資材を想定)に切り替える
     - name: GitCheckout
       run: git checkout master_20231205
     - name: Ls
       run: ls -lrt /tmp_contents
     - name: Ls
       run: ls -lrt
+
+    - name: Build the Docker image
+      run: docker build . --file /home/runner/work/test20231205/test20231205/sample_python/Dockerfile -t python-image
+    - name: DcImg
+      run: docker images
+    - name: DcSave
+      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/python-image.tar.gz
+    - name: Ls
+      run: ls -lrt /tmp_contents
+    - name: Ls
+      run: ls -lrt
+
+
       
 #    - name: Build the Docker image
 #      run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
