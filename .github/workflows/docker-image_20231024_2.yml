@@ -32,22 +32,26 @@ jobs:
     # ブランチmaster_20231026の資材を/tmp_contentsフォルダに格納する
     - name: GitCheckout
       run: git checkout master_20231026
-
     - name: CpContents
       run: sudo cp -r . /tmp_contents
-
     - name: Ls
       run: ls -lrt /tmp_contents
+    - name: Ls
+      run: ls -lrt
 
+    # ブランチmaster_20231205に切り替える
+    - name: GitCheckout
+      run: git checkout master_20231026
+    - name: Ls
+      run: ls -lrt /tmp_contents
+    - name: Ls
+      run: ls -lrt
       
 #    - name: Build the Docker image
 #      run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
 
 #    - name: DcImg
 #      run: docker images
-
-    - name: Ls
-      run: ls -lrt
 
 #    - name: Diff
 #      run: diff -s ./python-image.tar.gz ./python-image2.tar.gz > /dev/null 2>&1
