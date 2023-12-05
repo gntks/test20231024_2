@@ -33,7 +33,7 @@ jobs:
       run: ls -lrt
 
     - name: Diff
-      run: diff -s python-image.tar.gz python-image2.tar.gz > /dev/null 2>&1
+      run: diff -s ./python-image.tar.gz ./python-image2.tar.gz > /dev/null 2>&1
 
     - name: CompareFile
       run: |
