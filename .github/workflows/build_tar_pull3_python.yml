@@ -47,7 +47,7 @@ jobs:
 #      run: mkdir -p dep/off/im
     
     - name: Build the Docker image
-      run: docker build . --file /home/runner/work/test20231024/test20231024/sample_python/Dockerfile -t python-image
+      run: docker build . --file /home/runner/work/test20231205/test20231205/sample_python/Dockerfile -t python-image
 
     - name: Df_build_af
       run: df
@@ -58,10 +58,10 @@ jobs:
     - name: Df_save_bf
       run: df
 
-#    - name: DcSave
-#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
-#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
-#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+    - name: DcSave
+      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/python-image.tar.gz
+#      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/dep/off/im/python-image2.tar.gz
+#      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/dep/off/im/python-image5.tar.gz
 
     - name: Df_save_af
       run: df
@@ -70,7 +70,7 @@ jobs:
 #      run: git branch --contains
 
     - name: Cd
-      run: cd /home/runner/work/test20231024/test20231024
+      run: cd /home/runner/work/test20231205/test20231205
 
     - name: GitLfsIns
       run: sudo apt install git-lfs
@@ -88,9 +88,9 @@ jobs:
       run: git lfs track 
 
     - name: GitAdd
-      run: git add /home/runner/work/test20231024/test20231024/python-image2.tar.gz
-#      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
-#      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+      run: git add /home/runner/work/test20231205/test20231205/python-image.tar.gz
+#      run: git add /home/runner/work/test20231205/test20231205/dep/off/im/python-image2.tar.gz
+#      run: git add /home/runner/work/test20231205/test20231205/dep/off/im/python-image5.tar.gz
 
     - name: GitConfigEmail
       run: git config --global user.email "n_tashike@yahoo.co.jp"
@@ -102,7 +102,7 @@ jobs:
       run: git commit -m'GitCommit'
 
 #    - name: GitRemoteAdd
-#      run: git remote add origin https://github.com/gntks/test20231024.git
+#      run: git remote add origin https://github.com/gntks/test20231205.git
 
     - name: GitFetch
       run: git fetch -p
