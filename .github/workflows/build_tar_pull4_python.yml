@@ -1,0 +1,126 @@
+name: Docker Image CI4
+
+on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Df_checkout_bf
+      run: df
+
+    - uses: actions/checkout@v3
+
+    - name: Df_checkout_af
+      run: df
+
+    - name: GitFetch
+      run: git fetch -p
+
+#    - name: GitMerge
+#      run: git merge origin/master_20231026
+#      run: git merge origin/master
+    
+    - name: GitCheckout
+      run: git checkout master_20231026
+#      run: git checkout master_20231205
+    
+    - name: GitBranch
+      run: git branch
+
+    - name: Df_build_bf
+      run: df
+
+#    - name: Mkdir
+#      run: mkdir -p dep/off/im
+    
+    - name: Build the Docker image
+      run: docker build . --file /home/runner/work/test20231024/test20231024/sample_python/Dockerfile -t python-image
+
+    - name: Df_build_af
+      run: df
+
+    - name: DcImg
+      run: docker images
+
+    - name: Df_save_bf
+      run: df
+
+    - name: DcSave
+      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz_tmp
+#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
+#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+
+    - name: compare file
+      run: |
+        # diff python-image2.tar.gz python-image2.tar.gz_tmp > tmp.txt
+        if [diff python-image2.tar.gz python-image2.tar.gz_tmp]; then
+          echo "Same File"
+        else
+          echo "Different File"
+        fi     
+
+    - name: Df_save_af
+      run: df
+
+#    - name: DcChkBranch
+#      run: git branch --contains
+
+    - name: Cd
+      run: cd /home/runner/work/test20231024/test20231024
+
+    - name: GitLfsIns
+      run: sudo apt install git-lfs
+
+    - name: GitLfsVer
+      run: git lfs version
+
+    - name: GitLfsTrackBf
+      run: git lfs track 
+
+    - name: GitLfsTrackAdd
+      run: git lfs track "*.tar.gz" 
+
+    - name: GitLfsTrackAf
+      run: git lfs track 
+
+    - name: GitAdd
+      run: git add /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+#      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
+#      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+
+    - name: GitConfigEmail
+      run: git config --global user.email "n_tashike@yahoo.co.jp"
+
+    - name: GitConfigName
+      run: git config --global user.name "gntks"
+
+    - name: GitCommit
+      run: git commit -m'GitCommit'
+
+#    - name: GitRemoteAdd
+#      run: git remote add origin https://github.com/gntks/test20231024.git
+
+    - name: GitFetch
+      run: git fetch -p
+
+    - name: GitMerge
+      run: git merge origin/master_20231026
+#      run: git merge origin/master_20231205
+#      run: git merge origin/master
+
+    - name: GitPush
+      run: git push origin master_20231026
+#      run: git push origin master_20231205
+#      run: git push origin master
