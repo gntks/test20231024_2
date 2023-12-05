@@ -31,3 +31,13 @@ jobs:
 
     - name: Ls
       run: ls -lrt
+
+    - name: CompareFile
+      run: |
+        diff -s python-image.tar.gz python-image2.tar.gz > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+          echo "同じファイルです"
+        elif [ $? -eq 1 ]; then
+          echo "違うファイルです"
+        fi
+
