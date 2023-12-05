@@ -59,9 +59,9 @@ jobs:
       run: df
 
     - name: DcSave
-#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image2.tar.gz
 #      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
-      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+#      run: docker save python-image | gzip > /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
 
     - name: Df_save_af
       run: df
@@ -88,9 +88,9 @@ jobs:
       run: git lfs track 
 
     - name: GitAdd
-#      run: git add /home/runner/work/test20231024/test20231024/python-image2.tar.gz
+      run: git add /home/runner/work/test20231024/test20231024/python-image2.tar.gz
 #      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image2.tar.gz
-      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
+#      run: git add /home/runner/work/test20231024/test20231024/dep/off/im/python-image5.tar.gz
 
     - name: GitConfigEmail
       run: git config --global user.email "n_tashike@yahoo.co.jp"
