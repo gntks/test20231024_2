@@ -41,7 +41,7 @@ jobs:
 
     # ブランチmaster_20231205に切り替える
     - name: GitCheckout
-      run: git checkout master_20231026
+      run: git checkout master_20231205
     - name: Ls
       run: ls -lrt /tmp_contents
     - name: Ls
