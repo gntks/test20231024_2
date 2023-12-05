@@ -52,7 +52,8 @@ jobs:
     - name: DcImg
       run: docker images
     - name: DcSave
-      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/python-image.tar.gz
+#      run: docker save python-image | gzip > /home/runner/work/test20231205/test20231205/python-image.tar.gz
+      run: docker save python-image > /home/runner/work/test20231205/test20231205/python-image.tar
     - name: Ls
       run: ls -lrt /tmp_contents
     - name: Ls
