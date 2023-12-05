@@ -15,13 +15,25 @@ jobs:
 
     steps:
 
+    - name: PWD
+      run: pwd
+
     - uses: actions/checkout@v3
+
+    - name: PWD
+      run: pwd
 
     - name: GitFetch
       run: git fetch -p
 
+    - name: PWD
+      run: pwd
+
     - name: GitCheckout
       run: git checkout master_20231026
+
+    - name: PWD
+      run: pwd
 
 #    - name: Build the Docker image
 #      run: docker build . --file /home/runner/work/test20231024/test20231024/sample/Dockerfile --tag getting-started2:$(date +%s)
@@ -31,6 +43,9 @@ jobs:
 
     - name: Ls
       run: ls -lrt
+
+    - name: PWD
+      run: pwd
 
 #    - name: Diff
 #      run: diff -s ./python-image.tar.gz ./python-image2.tar.gz > /dev/null 2>&1
