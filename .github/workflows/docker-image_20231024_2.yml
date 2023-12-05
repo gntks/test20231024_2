@@ -19,7 +19,7 @@ jobs:
       run: pwd
 
     - name: Mkdir
-      run: mkdir /tmp_contents
+      run: sudo mkdir /tmp_contents
 
     - name: Ls
       run: ls -lrt /
@@ -34,7 +34,7 @@ jobs:
       run: git checkout master_20231026
 
     - name: CpContents
-      run: cp -r . /tmp_contents
+      run: sudo cp -r . /tmp_contents
 
     - name: Ls
       run: ls -lrt /tmp_contents
