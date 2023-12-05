@@ -15,14 +15,12 @@ jobs:
 
     steps:
 
-    - name: LfsLsFiles
-      run: git lfs ls-files
 
-    - name: Mkdir
-      run: sudo mkdir /tmp_contents
+#    - name: Mkdir
+#      run: sudo mkdir /tmp_contents
 
-    - name: Ls
-      run: ls -lrt /
+#    - name: Ls
+#      run: ls -lrt /
 
     - uses: actions/checkout@v3
 
@@ -32,6 +30,10 @@ jobs:
     # ブランチmaster_20231026の資材(一つ前のバックアップ資材を想定)を/tmp_contentsフォルダに格納する
     - name: GitCheckout
       run: git checkout master_20231026
+
+    - name: LfsLsFiles
+      run: git lfs ls-files
+
 #    - name: CpContents
 #      run: sudo cp -r . /tmp_contents
 #    - name: Ls
