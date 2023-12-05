@@ -64,8 +64,8 @@ jobs:
 
     - name: compare file
       run: |
-        # diff python-image2.tar.gz python-image2.tar.gz_tmp > tmp.txt
-        if [diff python-image2.tar.gz python-image2.tar.gz_tmp]; then
+        diff -q python-image2.tar.gz python-image2.tar.gz_tmp
+        if [diff -q python-image2.tar.gz python-image2.tar.gz_tmp]; then
           echo "Same File"
         else
           echo "Different File"
