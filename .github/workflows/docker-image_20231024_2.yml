@@ -32,13 +32,13 @@ jobs:
     - name: Ls
       run: ls -lrt
 
-    - name: Diff
+#    - name: Diff
 #      run: diff -s ./python-image.tar.gz ./python-image2.tar.gz > /dev/null 2>&1
-      run: git diff -- ./python-image.tar.gz ./python-image2.tar.gz
+#      run: git diff -- ./python-image.tar.gz ./python-image2.tar.gz
 
-    - name: CompareFile
-      run: |
-        ls -lrt
+#    - name: CompareFile
+#      run: |
+#        ls -lrt
 #        diff -s python-image.tar.gz python-image2.tar.gz > /dev/null 2>&1
 #        if [ $? -eq 0 ]; then
 #          echo "同じファイルです"
