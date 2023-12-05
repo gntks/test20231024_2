@@ -23,9 +23,15 @@ jobs:
 #      run: ls -lrt /
 
     - uses: actions/checkout@v3
+    
+    - name: LfsLsFiles
+      run: git lfs ls-files
 
     - name: GitFetch
       run: git fetch -p
+
+    - name: LfsLsFiles
+      run: git lfs ls-files  
 
     # ブランチmaster_20231026の資材(一つ前のバックアップ資材を想定)を/tmp_contentsフォルダに格納する
     - name: GitCheckout
