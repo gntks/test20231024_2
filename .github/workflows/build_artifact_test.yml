@@ -58,37 +58,7 @@ jobs:
         cp python-image.tar ./tarfile/python-image19.tar
         cp python-image.tar ./tarfile/python-image20.tar
         cp python-image.tar ./tarfile/python-image21.tar
-        cp python-image.tar ./tarfile/python-image22.tar
-        cp python-image.tar ./tarfile/python-image23.tar
-        cp python-image.tar ./tarfile/python-image24.tar
-        cp python-image.tar ./tarfile/python-image25.tar
-        cp python-image.tar ./tarfile/python-image26.tar
-        cp python-image.tar ./tarfile/python-image27.tar
-        cp python-image.tar ./tarfile/python-image28.tar
-        cp python-image.tar ./tarfile/python-image29.tar
-        cp python-image.tar ./tarfile/python-image30.tar
-        cp python-image.tar ./tarfile/python-image31.tar
-        cp python-image.tar ./tarfile/python-image32.tar
-        cp python-image.tar ./tarfile/python-image33.tar
-        cp python-image.tar ./tarfile/python-image34.tar
-        cp python-image.tar ./tarfile/python-image35.tar
-        cp python-image.tar ./tarfile/python-image36.tar
-        cp python-image.tar ./tarfile/python-image37.tar
-        cp python-image.tar ./tarfile/python-image38.tar
-        cp python-image.tar ./tarfile/python-image39.tar
-        cp python-image.tar ./tarfile/python-image40.tar
-        cp python-image.tar ./tarfile/python-image41.tar
-        cp python-image.tar ./tarfile/python-image42.tar
-        cp python-image.tar ./tarfile/python-image43.tar
-        cp python-image.tar ./tarfile/python-image44.tar
-        cp python-image.tar ./tarfile/python-image45.tar
-        cp python-image.tar ./tarfile/python-image46.tar
-        cp python-image.tar ./tarfile/python-image47.tar
-        cp python-image.tar ./tarfile/python-image48.tar
-        cp python-image.tar ./tarfile/python-image49.tar
-        cp python-image.tar ./tarfile/python-image50.tar
-        cp python-image.tar ./tarfile/python-image51.tar
-        tar cvf python-image-all.tar ./tarfile
+        tar --remove-files cvf python-image-all.tar ./tarfile
         ls -lrt
         df        
 #        tar cvf python-image-all.tar python-image.tar python-image2.tar python-image3.tar python-image4.tar
