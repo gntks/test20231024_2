@@ -34,13 +34,15 @@ jobs:
       run: |
         docker save python-image | gzip > python-image.tar2.gz
 
-    - name: Spilit
+    - name: Dummy Spilit
       run: |
-        split -b 200M -d python-image.tar.gz
+        dd if=/dev/zero of=1.3G.dummy bs=1M count=1300
+        split -b 500M -d -a 3 1.3G.dummy 1.3G.dummy
         ls -lrt
+        df
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
          name: FilePath
-         path: python-image.tar2.gz
+         path: 1.3G.dummy
