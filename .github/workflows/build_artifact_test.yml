@@ -58,7 +58,7 @@ jobs:
         cp python-image.tar ./tarfile/python-image19.tar
         cp python-image.tar ./tarfile/python-image20.tar
         cp python-image.tar ./tarfile/python-image21.tar
-        tar --remove-files cvf python-image-all.tar ./tarfile
+        tar --remove-files -cvf python-image-all.tar ./tarfile
         ls -lrt
         df        
 #        tar cvf python-image-all.tar python-image.tar python-image2.tar python-image3.tar python-image4.tar
