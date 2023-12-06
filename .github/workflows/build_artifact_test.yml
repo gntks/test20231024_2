@@ -32,9 +32,9 @@ jobs:
 
     - name: DcSave
       run: |
-        docker save python-image | gzip > python-image.tar.gz
+        docker save python-image | gzip > python-image.tar2.gz
 
-    - name: DcSave
+    - name: Spilit
       run: |
         split -b 200M -d python-image.tar.gz
         ls -lrt
@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
          name: FilePath
-         path: python-image.tar.gz
+         path: python-image.tar2.gz
