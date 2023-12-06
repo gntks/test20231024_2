@@ -32,7 +32,7 @@ jobs:
 
     - name: DcSave
       run: |
-        docker save python-image | gzip > /home/runner/work/test20231024/test20231024/python-image.tar.gz
+        docker save python-image | gzip > python-image.tar.gz
 
     - name: DcSave
       run: |
@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
          name: FilePath
-         path: /home/runner/work/test20231024/test20231024/python-image.tar.gz
+         path: python-image.tar.gz
