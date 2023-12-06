@@ -32,17 +32,27 @@ jobs:
 
     - name: DcSave
       run: |
-        docker save python-image | gzip > python-image.tar2.gz
+         docker save python-image > python-image.tar
+#        docker save python-image | gzip > python-image.tar2.gz
 
-    - name: Dummy Spilit
+    - name: Cp Tar
       run: |
-        dd if=/dev/zero of=1.3G.dummy bs=1M count=1300
-        split -b 500M -d -a 3 1.3G.dummy 1.3G.dummy
+        cp python-image.tar python-image2.tar
+        cp python-image.tar python-image3.tar
+        cp python-image.tar python-image4.tar
+        tar cvf python-image-all.tar python-image.tar python-image2.tar python-image3.tar python-image4.tar
         ls -lrt
-        df
+        df        
+
+#    - name: Dummy Spilit
+#      run: |
+#        dd if=/dev/zero of=1.3G.dummy bs=1M count=1300
+#        split -b 500M -d -a 3 1.3G.dummy 1.3G.dummy
+#        ls -lrt
+#        df
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
          name: FilePath
-         path: 1.3G.dummy
+         path: python-image-all.tar
