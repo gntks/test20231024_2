@@ -1,0 +1,26 @@
+name: Redhat Test
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: DL oc-mirror.tar.gz
+      run: |
+        ls -lrt
+        wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest/oc-mirror.tar.gz
+        ls -lrt
+
+#    - name: Upload Artifacts
+#      uses: actions/upload-artifact@v3
+#      with:
+#         name: FilePath
+#         path: python-image-all.tar
