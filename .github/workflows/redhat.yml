@@ -13,6 +13,8 @@ jobs:
 
     steps:
 
+    - uses: actions/checkout@v3
+
     - name: DL oc-mirror.tar.gz
       run: |
         ls -lrt
