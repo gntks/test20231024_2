@@ -40,6 +40,7 @@ jobs:
        cabextract oc-4.14.5-linux.tar.gz1.cab
        tar xvzf oc-4.14.5-linux.tar.gz
        echo $PATH
+       mv oc /usr/local/bin/
        oc version
 #       wget https://access.cdn.redhat.com/content/origin/files/sha256/a2/a25d381e66c202a5a73b2146c839b78701e64548ca76ce14c8373e242f67bac5/oc-4.14.5-linux.tar.gz?user=ae639a49042aa18ed24d083f948d7e27&_auth_=1702018434_6a536b43310610e9182785b7384dce5a
 #       tar xvzf oc-4.11.27-linux.tar.gz
