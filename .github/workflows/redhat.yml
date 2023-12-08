@@ -32,6 +32,7 @@ jobs:
     - name: イメージミラーリング用の認証情報
       run: |
         cat ./pull-secret.txt | jq . > ./pull-secret.json
+        mkdir $XDG_RUNTIME_DIR/containers
         cp pull-secret.json $XDG_RUNTIME_DIR/containers/auth.json
 
     - name: ocコマンドのインストール
