@@ -15,7 +15,7 @@ mirror:
     packages:
     - name: cluster-logging
       channels:
-      - name: stable
+      - name: stable-5.7
     - name: rhsso-operator
       channels:
       - name: stable
