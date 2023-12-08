@@ -17,6 +17,7 @@ jobs:
 
     - name: test
       run: |
+        sudo apt install cabextract
         cabextract oc-4.14.5-linux.tar.gz1.cab
 
     - name: DL oc-mirror.tar.gz & mirror-registry.tar.gz
