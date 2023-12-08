@@ -43,7 +43,8 @@ jobs:
 
     - name: Operatorカタログのミラーリング用イメージセット作成
       run: |
-       mkdir -p 
+       mkdir -p /home/user/metadata
+       mkdir -p /home/user/redhat-operators
        oc mirror init > imageset-config_tmp.yaml
        oc mirror --config=./imageset-config.yaml file:///home/user/redhat-operators
 
