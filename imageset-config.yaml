@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v1alpha2
+storageConfig:
+  local:
+    path: <storage_backend_path>
+mirror:
+  platform:
+    channels:
+    - name: stable-4.11
+      minVersion: 4.11.28
+      maxVersion: 4.11.28
+      type: ocp
+  operators:
+  - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.11
+    packages:
+    - name: cluster-logging
+      channels:
+      - name: stable
+    - name: rhsso-operator
+      channels:
+      - name: stable
+  - catalog: registry.redhat.io/redhat/certified-operator-index:v4.11
+    packages:
+    - name: elasticsearch-eck-operator-certified
+      channels:
+      - name: stable
+  additionalImages:
+  - name: registry.redhat.io/ubi8/ubi:latest
+  helm: {}
