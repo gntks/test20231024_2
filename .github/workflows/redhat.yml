@@ -51,7 +51,7 @@ jobs:
        mkdir -p ./metadata
        mkdir -p ./redhat-operators
        oc mirror init > imageset-config_tmp.yaml
-       sed 's/<storage_backend_path>/\.\/metadata/g' imageset-config_tmp.yaml > imageset-config.yaml
+       sed 's/\./\.\/metadata/g' imageset-config_tmp.yaml > imageset-config.yaml
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 #       mkdir -p /home/user/metadata
 #       mkdir -p /home/user/redhat-operators
