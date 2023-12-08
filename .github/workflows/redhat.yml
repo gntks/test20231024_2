@@ -22,12 +22,30 @@ jobs:
         wget https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/mirror-registry/latest/mirror-registry.tar.gz
         ls -lrt
 
-    - name: oc-mirrorプラグインをインストール
+    - name: oc-mirrorプラグイン
       run: |
         tar xvzf oc-mirror.tar.gz
         chmod +x oc-mirror
         sudo mv oc-mirror /usr/local/bin/.
         oc mirror help
+
+    - name: イメージミラーリング用の認証情報
+      run: |
+        cat ./pull-secret.txt | jq . > ./pull-secret.json
+        cp pull-secret.json $XDG_RUNTIME_DIR/containers/auth.json
+
+    - name: ocコマンドのインストール
+      run: |
+       wget https://access.cdn.redhat.com/content/origin/files/sha256/a2/a25d381e66c202a5a73b2146c839b78701e64548ca76ce14c8373e242f67bac5/oc-4.14.5-linux.tar.gz?user=ae639a49042aa18ed24d083f948d7e27&_auth_=1702018434_6a536b43310610e9182785b7384dce5a
+       tar xvzf oc-4.11.27-linux.tar.gz
+       echo $PATH
+       oc version
+
+    - name: Operatorカタログのミラーリング用イメージセット作成
+      run: |
+       mkdir -p 
+       oc mirror init > imageset-config_tmp.yaml
+       oc mirror --config=./imageset-config.yaml file:///home/user/redhat-operators
 
 #    - name: Upload Artifacts
 #      uses: actions/upload-artifact@v3
