@@ -15,6 +15,22 @@ jobs:
 
     - uses: actions/checkout@v3
 
+    - name: Error
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution
+      # ディレクトリが存在することで、2回目は確実にエラーになる
+      run: |
+        mkdir hoge
+        mkdir hoge
+    - name: Error handling
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        echo "Error handling"
+        echo $
+        exit 1
+
     - name: DL oc-mirror.tar.gz & mirror-registry.tar.gz
       run: |
         ls -lrt
