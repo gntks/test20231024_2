@@ -53,6 +53,8 @@ jobs:
 
     - name: ImgsetMk
       run: |
+       rm -rf ./metadata
+       rm -rf ./redhat-operators
        mkdir -p ./metadata
        mkdir -p ./redhat-operators
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
