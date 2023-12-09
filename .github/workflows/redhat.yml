@@ -80,7 +80,7 @@ jobs:
        mkdir -p ./redhat-operators
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling1
+    - name: Error handling
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
@@ -89,7 +89,7 @@ jobs:
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling2
+    - name: Error handling
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
@@ -98,7 +98,7 @@ jobs:
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling3
+    - name: Error handling
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
@@ -107,10 +107,910 @@ jobs:
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling4
-      if: ${{ steps.error_execution4.outcome == 'failure' }}
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution5
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution6
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution7
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution8
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution9
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution10
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution11
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution12
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution13
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution14
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution15
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution16
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution17
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution18
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution19
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution20
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution21
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution22
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution23
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution24
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution25
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution26
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution27
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution28
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution29
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution30
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution31
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution32
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution33
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution34
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution35
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution36
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution37
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution38
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution39
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution40
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution41
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution42
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution43
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution44
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution45
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution46
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution47
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution48
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution49
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution50
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution51
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution52
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution53
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution54
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution55
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution56
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution57
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution58
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution59
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution60
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution61
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution62
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution63
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution64
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution65
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution66
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution67
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution68
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution69
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution70
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution71
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution72
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution73
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution74
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution75
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution76
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution77
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution78
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution79
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution80
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution81
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution82
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution83
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution84
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution85
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution86
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution87
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution88
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution89
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution90
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
+
+
+
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution91
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution92
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution93
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution94
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution95
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution96
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution97
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution98
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution99
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+    - name: Error handling
+      # エラーでも処理を継続する
+      continue-on-error: true
+      # あとで実行結果を参照するため、IDを振っておく
+      id: error_execution100
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
+
+
 
 #       cp -r ./oc-mirror-workspace ./redhat-operators
 #       ls -lrt ./redhat-operators/oc-mirror-workspace/operators.1702085673/manifests-redhat-operator-index/
