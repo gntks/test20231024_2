@@ -57,6 +57,8 @@ jobs:
        rm -rf ./redhat-operators
        mkdir -p ./metadata
        mkdir -p ./redhat-operators
+       cp -r ./oc-mirror-workspace ./redhat-operators
+       ls -lrt ./redhat-operators/oc-mirror-workspace/operators.1702085673/manifests-redhat-operator-index/
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
 #       oc mirror init > imageset-config_tmp.yaml
