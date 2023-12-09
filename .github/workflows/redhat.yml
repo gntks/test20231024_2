@@ -60,10 +60,10 @@ jobs:
        mkdir -p ./redhat-operators
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-      - name: Error handling
-        if: ${{ steps.error_execution.outcome == 'failure' }}
-        run: |
-          oc mirror --config=./imageset-config.yaml file://./redhat-operators
+    - name: Error handling
+      if: ${{ steps.error_execution.outcome == 'failure' }}
+      run: |
+        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
 #       cp -r ./oc-mirror-workspace ./redhat-operators
 #       ls -lrt ./redhat-operators/oc-mirror-workspace/operators.1702085673/manifests-redhat-operator-index/
