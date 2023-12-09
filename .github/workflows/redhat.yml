@@ -80,39 +80,35 @@ jobs:
        mkdir -p ./redhat-operators
        oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling
+    - name: Error handling1
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
       id: error_execution2
-      if: ${{ steps.error_execution2.outcome == 'failure' }}
+      if: ${{ steps.error_execution.outcome == 'failure' }}
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling
+    - name: Error handling2
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
       id: error_execution3
-      if: ${{ steps.error_execution3.outcome == 'failure' }}
+      if: ${{ steps.error_execution2.outcome == 'failure' }}
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling
+    - name: Error handling3
       # エラーでも処理を継続する
       continue-on-error: true
       # あとで実行結果を参照するため、IDを振っておく
       id: error_execution4
-      if: ${{ steps.error_execution4.outcome == 'failure' }}
+      if: ${{ steps.error_execution3.outcome == 'failure' }}
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
-    - name: Error handling
-      # エラーでも処理を継続する
-      continue-on-error: true
-      # あとで実行結果を参照するため、IDを振っておく
-      id: error_execution5
-      if: ${{ steps.error_execution5.outcome == 'failure' }}
+    - name: Error handling4
+      if: ${{ steps.error_execution4.outcome == 'failure' }}
       run: |
         oc mirror --config=./imageset-config.yaml file://./redhat-operators
 
