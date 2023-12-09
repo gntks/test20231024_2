@@ -1,0 +1,11 @@
+registry.redhat.io/rh-sso-7/sso7-rhel8-operator@sha256:96317f3217a245b3dbce4fb80e12e7af32b7a6a9261b9720b76380634efe7977=file://redhat/redhat-operator-index/rh-sso-7/sso7-rhel8-operator:fc6911e4
+registry.redhat.io/redhat/redhat-operator-index:v4.11=file://redhat/redhat-operator-index:v4.11
+registry.redhat.io/openshift-logging/cluster-logging-rhel8-operator@sha256:c63d83917d2913f6f5a4c7ab082a1d9570a583de6a54d4db49b015ca6cd10093=file://redhat/redhat-operator-index/openshift-logging/cluster-logging-rhel8-operator:c63d4dee
+registry.redhat.io/rh-sso-7/sso7-rhel8-init-container@sha256:7b489b2fc8ec08e23e209e1c00e2110535f1e62b12a4eb075068bfb8694eb225=file://redhat/redhat-operator-index/rh-sso-7/sso7-rhel8-init-container:d8fb5f10
+registry.redhat.io/openshift-logging/fluentd-rhel8@sha256:7e9b9028fa12d928a7e78d1c9793cf1c905e92376461757b29c05aa068d75a17=file://redhat/redhat-operator-index/openshift-logging/fluentd-rhel8:d0f6fd41
+registry.redhat.io/rh-sso-7/sso7-rhel8-operator-bundle@sha256:7e32b1ef1084b87c0470bc6668e8c14bb19749c897fa99f140a68773593a39d2=file://redhat/redhat-operator-index/rh-sso-7/sso7-rhel8-operator-bundle:de0d58e9
+registry.redhat.io/rh-sso-7/sso76-openshift-rhel8@sha256:a1127b6919f0b77cedf9d02a03589b7c4d6b94e4045a5c8612b2940be24bf30c=file://redhat/redhat-operator-index/rh-sso-7/sso76-openshift-rhel8:dddc1e33
+registry.redhat.io/openshift-logging/cluster-logging-operator-bundle@sha256:14b7d003bf847466c11cc0740df2581ca30e69acb21da7475b4c3fa088c18479=file://redhat/redhat-operator-index/openshift-logging/cluster-logging-operator-bundle:754fce54
+registry.redhat.io/openshift-logging/vector-rhel8@sha256:dde60833bf98aa564be31ddc1b83de0b848f402c00b4238a2c0c61aa1a55023f=file://redhat/redhat-operator-index/openshift-logging/vector-rhel8:68e4d8b3
+registry.redhat.io/openshift-logging/log-file-metric-exporter-rhel8@sha256:cdbaa67797977a0b5e50fe25424441363de15982c790107d321cd25b152b0de1=file://redhat/redhat-operator-index/openshift-logging/log-file-metric-exporter-rhel8:2e5e43fb
+registry.redhat.io/openshift-logging/logging-view-plugin-rhel8@sha256:6d5376f3c04f6bcbe3fa083fc84620a7196c48bcf94f8241f484ea3f1a9c5a71=file://redhat/redhat-operator-index/openshift-logging/logging-view-plugin-rhel8:442c1ae8
