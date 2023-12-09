@@ -31,10 +31,12 @@ jobs:
 
     - name: AuthForImgMrr
       run: |
-        cat ./pull-secret.txt | jq . > ./pull-secret.json
-        ls -lZ ./pull-secret.json
         mkdir -p $XDG_RUNTIME_DIR/containers
         cp pull-secret.json $XDG_RUNTIME_DIR/containers/auth.json
+        ls -lrt $XDG_RUNTIME_DIR
+        cat $XDG_RUNTIME_DIR/containers/auth.json
+#        cat ./pull-secret.txt | jq . > ./pull-secret.json
+#        ls -lZ ./pull-secret.json
 
     - name: ocCmdIns
       run: |
