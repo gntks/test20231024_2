@@ -1,7 +1,10 @@
 name: Build Artifact Test2
 
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
+  push:
+   paths:
+     - '.github/workflows/build_artifact_test2.yml'
 
 permissions: write-all
 
