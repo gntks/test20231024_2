@@ -1,10 +1,10 @@
 name: Redhat Test2
 
 on:
-  workflow_dispatch:
-#  push:
-#    paths:
-#      - '.github/workflows/redhat2.yml'
+#  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/redhat2.yml'
 
 permissions: write-all
 
