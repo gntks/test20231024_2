@@ -1,0 +1,78 @@
+name: Build Artifact Test2
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+env:
+  dl_dir: "work"
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - name: GitFetch
+      run: git fetch -p
+   
+    - name: GitCheckout
+      run: git checkout master_20231026
+    
+    - name: GitBranch
+      run: git branch
+    
+    - name: Build the Docker image
+      run: docker build . --file sample_python/Dockerfile -t python-image
+
+    - name: DcImg
+      run: docker images
+
+    - name: DcSave
+      run: |
+         docker save python-image > python-image.tar
+#        docker save python-image | gzip > python-image.tar2.gz
+
+    - name: Cp Tar
+      run: |
+        mkdir ./${{ env.dl_dir }}
+        cp python-image.tar ./${{ env.dl_dir }}/python-image2.tar
+        cp python-image.tar ./${{ env.dl_dir }}/python-image3.tar
+
+        ls -lrt ./${{ env.dl_dir }}
+#        df        
+#        tar --remove-files -cvf python-image-all.tar ./tarfile
+#        tar cvf python-image-all.tar python-image.tar python-image2.tar python-image3.tar python-image4.tar
+#        cp python-image.tar ./tarfile/python-image3.tar
+#        cp python-image.tar ./tarfile/python-image4.tar
+#        cp python-image.tar ./tarfile/python-image5.tar
+#        cp python-image.tar ./tarfile/python-image6.tar
+#        cp python-image.tar ./tarfile/python-image7.tar
+#        cp python-image.tar ./tarfile/python-image8.tar
+#        cp python-image.tar ./tarfile/python-image9.tar
+#        cp python-image.tar ./tarfile/python-image10.tar
+#        cp python-image.tar ./tarfile/python-image11.tar
+#        cp python-image.tar ./tarfile/python-image12.tar
+#        cp python-image.tar ./tarfile/python-image13.tar
+#        cp python-image.tar ./tarfile/python-image14.tar
+#        cp python-image.tar ./tarfile/python-image15.tar
+#        cp python-image.tar ./tarfile/python-image16.tar
+
+#    - name: Dummy Spilit
+#      run: |
+#        dd if=/dev/zero of=1.3G.dummy bs=1M count=1300
+#        split -b 500M -d -a 3 1.3G.dummy 1.3G.dummy
+#        ls -lrt
+#        df
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+         name: archive-file-${{ github.run_id }}
+         path: ${{ env.dl_dir }}/*
+#         name: FilePath
