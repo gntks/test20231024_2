@@ -2,4 +2,5 @@ name: action test
 description: action test desc
 
 runs:
-  echo "hello world"
+  using: 'node12'
+  main: 'dist/index.js'
