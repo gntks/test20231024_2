@@ -10,6 +10,7 @@ permissions: write-all
 
 env:
   dl_dir: "work"
+  GH_TOKEN: ${{ secrets.GH_ACTIONS_TOKEN }}
 
 jobs:
 
