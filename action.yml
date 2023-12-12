@@ -1,0 +1,5 @@
+name: action test
+description: action test desc
+
+runs:
+  echo "hello world"
