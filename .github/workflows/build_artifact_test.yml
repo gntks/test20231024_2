@@ -19,7 +19,8 @@ jobs:
       run: git fetch -p
    
     - name: GitCheckout
-      run: git checkout master_20231026
+      run: git checkout master
+#      run: git checkout master_20231026
     
     - name: GitBranch
       run: git branch
