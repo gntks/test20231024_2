@@ -35,27 +35,27 @@ jobs:
          docker save python-image > python-image.tar
 #        docker save python-image | gzip > python-image.tar2.gz
 
-    - name: Cp Tar
-      run: |
-        mkdir ./tarfile
-        cp python-image.tar ./tarfile/python-image2.tar
-        cp python-image.tar ./tarfile/python-image3.tar
-        cp python-image.tar ./tarfile/python-image4.tar
-        cp python-image.tar ./tarfile/python-image5.tar
-        cp python-image.tar ./tarfile/python-image6.tar
-        cp python-image.tar ./tarfile/python-image7.tar
-        cp python-image.tar ./tarfile/python-image8.tar
-        cp python-image.tar ./tarfile/python-image9.tar
-        cp python-image.tar ./tarfile/python-image10.tar
-        cp python-image.tar ./tarfile/python-image11.tar
-        cp python-image.tar ./tarfile/python-image12.tar
-        cp python-image.tar ./tarfile/python-image13.tar
-        cp python-image.tar ./tarfile/python-image14.tar
-        cp python-image.tar ./tarfile/python-image15.tar
-        cp python-image.tar ./tarfile/python-image16.tar
-        tar --remove-files -cvf python-image-all.tar ./tarfile
-        ls -lrt
-        df        
+#    - name: Cp Tar
+#      run: |
+#        mkdir ./tarfile
+#        cp python-image.tar ./tarfile/python-image2.tar
+#        cp python-image.tar ./tarfile/python-image3.tar
+#        cp python-image.tar ./tarfile/python-image4.tar
+#        cp python-image.tar ./tarfile/python-image5.tar
+#        cp python-image.tar ./tarfile/python-image6.tar
+#        cp python-image.tar ./tarfile/python-image7.tar
+#        cp python-image.tar ./tarfile/python-image8.tar
+#        cp python-image.tar ./tarfile/python-image9.tar
+#        cp python-image.tar ./tarfile/python-image10.tar
+#        cp python-image.tar ./tarfile/python-image11.tar
+#        cp python-image.tar ./tarfile/python-image12.tar
+#        cp python-image.tar ./tarfile/python-image13.tar
+#        cp python-image.tar ./tarfile/python-image14.tar
+#        cp python-image.tar ./tarfile/python-image15.tar
+#        cp python-image.tar ./tarfile/python-image16.tar
+#        tar --remove-files -cvf python-image-all.tar ./tarfile
+#        ls -lrt
+#        df        
 #        tar cvf python-image-all.tar python-image.tar python-image2.tar python-image3.tar python-image4.tar
 
 #    - name: Dummy Spilit
@@ -69,4 +69,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
          name: FilePath
-         path: python-image-all.tar
+         path: python-image.tar
+#         path: python-image-all.tar
