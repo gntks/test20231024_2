@@ -30,7 +30,7 @@ jobs:
 
     - name: CharTest
       run: |
-         TEST = ${{env.path}}
+         TEST = ${{env.path////_}}
          echo ${TEST}
 #         TEST = ${env.path///_}
 
