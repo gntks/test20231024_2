@@ -30,7 +30,7 @@ jobs:
 
     - name: CharTest
       run: |
-         TEST = ${env.path//-/_}
+         TEST = ${env.path////_}
          echo TEST
 
     - name: GitFetch
