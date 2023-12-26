@@ -30,7 +30,7 @@ jobs:
 
     - name: CharTest
       run: |
-        echo "${env.path////_}"
+        echo "${env.path//"/"/"_"}"
 
 #        string="stirng" ; echo "${string//ir/ri}"
 #         echo ${TEST}
