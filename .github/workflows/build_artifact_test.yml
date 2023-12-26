@@ -94,7 +94,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-${string2}
+         name: FilePath-${{string2}}
          path: python-image.tar
 #         name: FilePath-${{env.path}}
 #         name: FilePath-${{ github.run_id }}
@@ -103,7 +103,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-${string2}-2
+         name: FilePath-${{string2}}-2
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
