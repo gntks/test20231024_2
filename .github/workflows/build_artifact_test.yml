@@ -30,7 +30,7 @@ jobs:
 
     - name: CharTest
       run: |
-         TEST = ${${{env.path}////_}
+         TEST = ${"deployment/offline-assets/images"////_}
          echo ${TEST}
 #         TEST = ${env.path///_}
 
