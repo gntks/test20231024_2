@@ -95,17 +95,17 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-string=${{env.path}} ; string2="${string////ri}"
+         name: FilePath-${string=${{env.path}} ; echo="${string////ri}"}
          path: python-image.tar
 #         name: FilePath-${{env.path}}
 #         name: FilePath-${{ github.run_id }}
 #         path: python-image-all.tar
 
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-         name: FilePath-string=${{env.path}} ; string2="${string////ri}"-2
-         path: python-image.tar
+#    - name: Upload Artifacts
+#      uses: actions/upload-artifact@v3
+#      with:
+#         name: FilePath-string=${{env.path}} ; string2="${string////ri}"-2
+#         path: python-image.tar
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
 
