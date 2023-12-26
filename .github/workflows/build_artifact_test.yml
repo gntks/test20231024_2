@@ -12,6 +12,11 @@ jobs:
     uses: gntks/test20231024_2/.github/workflows/run_id_test.yml@master
 #    uses: nttrd-nic/smo_mano-home/.github/workflows/page-to-nfs.yml@develop
 
+  fetch-oc2:
+    name: Fetch oc2
+    uses: gntks/test20231024_2/.github/workflows/run_id_test.yml@master
+#    uses: nttrd-nic/smo_mano-home/.github/workflows/page-to-nfs.yml@develop
+
   build:
 
     runs-on: ubuntu-latest
