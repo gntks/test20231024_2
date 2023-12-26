@@ -44,7 +44,7 @@ jobs:
 
     - name: Use the value
       run: |
-        printf '%s\n' "$action_state" # This will output 'yellow'
+        printf '%s\n' "$string3" # This will output 'yellow'
 
     - name: GitFetch
       run: git fetch -p
