@@ -28,9 +28,10 @@ jobs:
 
     - uses: actions/checkout@v3
 
+# ★★★★★★★★★★★★★★★★★★★★★★★
     - name: CharTest
       run: |
-        string=${{env.path}} ; string2="${string////ri}"
+        string=${{env.path}} ; string2="${string////_}"
         echo "string3="${string2}"" >> "$GITHUB_ENV"
 #        echo "${string2}"  >> "$GITHUB_ENV"
 #        string=${{env.path}} ; echo "${string////ri}"
@@ -97,6 +98,9 @@ jobs:
 #        ls -lrt
 #        df
 
+# ★★★★★★★★★★★★★★★★★★★★★★★
+# ★★★★★★★★注意点：もし同じディレクトリ(nfsのinput.pathが同じ)ものが有る場合は、
+# このロジックでは回避できないため、input.pathにインクリメント＋１を付けるなどで手動対処するしかない。
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
