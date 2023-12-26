@@ -30,7 +30,8 @@ jobs:
 
     - name: CharTest
       run: |
-        string=${{env.path}} ; echo "string2="${string////ri}""  >> "$GITHUB_ENV"
+        string=${{env.path}} ; string2="${string////ri}"
+        echo "string3="${string2}"" >> "$GITHUB_ENV"
 #        echo "${string2}"  >> "$GITHUB_ENV"
 #        string=${{env.path}} ; echo "${string////ri}"
 #        string="deployment/offline-assets/images" ; echo "${string////ri}"
@@ -95,7 +96,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-'${string2}'
+         name: FilePath-${{string3}}
          path: python-image.tar
 #         name: FilePath-${{env.path}}
 #         name: FilePath-${{ github.run_id }}
