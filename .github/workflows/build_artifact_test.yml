@@ -30,8 +30,9 @@ jobs:
 
     - name: CharTest
       run: |
-        string="stirng" ; echo "${string//ir/ri}"
+        echo "${env.path////_}"
 
+#        string="stirng" ; echo "${string//ir/ri}"
 #         echo ${TEST}
 #         TEST = ${"deployment/offline-assets/images"//-/_}
 #         TEST = ${env.path///_}
