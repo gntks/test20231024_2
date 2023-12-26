@@ -79,7 +79,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-deployment/offline-assets
+         name: FilePath-'deployment/offline-assets'
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}
 #         path: python-image-all.tar
@@ -87,7 +87,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-deployment/offline-assets2
+         name: FilePath-'deployment/offline-assets'-2
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
