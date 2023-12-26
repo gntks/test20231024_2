@@ -28,10 +28,10 @@ jobs:
 
     - uses: actions/checkout@v3
 
-    - name: CharTest
-      run: |
-        string=${{env.path}} ; ${{env.path}}="${string////ri}"
-        echo ${{env.path}}
+#    - name: CharTest
+#      run: |
+#        string=${{env.path}} ; ${{env.path}}="${string////ri}"
+#        echo ${{env.path}}
 #        string=${{env.path}} ; echo "${string////ri}"
 #        string="deployment/offline-assets/images" ; echo "${string////ri}"
 
