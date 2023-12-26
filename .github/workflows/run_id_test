@@ -1,0 +1,14 @@
+name: Run Id Test
+
+on:
+  workflow_call:
+
+jobs:
+  run-id-test:
+    name: Run Id Test
+
+     runs-on: ubuntu-22.04
+
+      - name: Display
+        run: |
+          echo ${{ github.run_id }}
