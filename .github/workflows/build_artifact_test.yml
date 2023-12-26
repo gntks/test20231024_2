@@ -28,6 +28,11 @@ jobs:
 
     - uses: actions/checkout@v3
 
+    - name: CharTest
+      run: |
+         TEST = "${{env.path////_}}"
+         echo TEST
+
     - name: GitFetch
       run: git fetch -p
    
@@ -82,7 +87,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-${{env.path////_}}
+         name: FilePath-${{env.path}}
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}
 #         path: python-image-all.tar
@@ -90,7 +95,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-${{env.path////_}}-2
+         name: FilePath-${{env.path}}-2
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
