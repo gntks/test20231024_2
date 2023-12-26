@@ -30,7 +30,8 @@ jobs:
 
     - name: CharTest
       run: |
-        string="deployment/offline-assets/images" ; echo "${string////ri}"
+        string="deployment/offline-assets/images" ; echo "${env.path////ri}"
+#        string="deployment/offline-assets/images" ; echo "${string////ri}"
 
 #        echo "${env.path//"/"/"_"}"
 #        string="stirng" ; echo "${string//ir/ri}"
