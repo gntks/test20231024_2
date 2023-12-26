@@ -5,6 +5,9 @@ on:
 
 permissions: write-all
 
+env:
+  path: "deployment/offline-assets/images"
+
 jobs:
 
 #  fetch-oc:
@@ -79,7 +82,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-'deployment/offline-assets'
+         name: FilePath-${{env.path////_}}
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}
 #         path: python-image-all.tar
@@ -87,7 +90,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-         name: FilePath-'deployment/offline-assets'-2
+         name: FilePath-${{env.path////_}}-2
          path: python-image.tar
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
