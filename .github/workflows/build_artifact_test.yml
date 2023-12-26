@@ -93,9 +93,6 @@ jobs:
 #        df
 
     - name: Upload Artifacts
-      run: |
-        string=${{env.path}} ; string2="${string////ri}"
-  
       uses: actions/upload-artifact@v3
       with:
          name: FilePath-${string2}
