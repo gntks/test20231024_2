@@ -124,3 +124,19 @@ jobs:
 #         name: FilePath-${{ github.run_id }}-2
 #         path: python-image-all.tar
 
+
+
+    - name: Set current datetime as env variable
+      env:
+        TZ: 'Asia/Tokyo' # タイムゾーン指定
+      run: echo "CURRENT_DATETIME=$(date +'%Y-%m-%d %H%M%S')" >>  $GITHUB_ENV
+
+# ★★★★★★★★★★★★★★★★★★★★★★★
+# ★★★★★★★★注意点：もし同じディレクトリ(nfsのinput.pathが同じ)ものが有る場合は、
+# このロジックでは回避できないため、input.pathにインクリメント＋１を付けるなどで手動対処するしかない。
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+         name: FilePath-${{env.CURRENT_DATETIME}}
+         path: python-image.tar
+
